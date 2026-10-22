@@ -1,0 +1,176 @@
+---
+import Layout from "../layout/layout.astro";
+const author = "Magdalena González";
+---
+<Layout
+    title="Competitivo"
+    description="Descubre los rangos, la clasificación y los esports de Rocket League."
+    author={author}
+>
+
+    <section class="container page-intro">
+        <span class="eyebrow">SUBE DE NIVEL</span>
+        <h1>La arena competitiva</h1>
+        <p>
+            La clasificación competitiva permite medir tu progreso y enfrentarte
+            a jugadores de un nivel similar.
+        </p>
+    </section>
+    <section class="container rank-section">
+        <h2>Rangos del juego</h2>
+        <p class="section-description">
+            Estos son los principales rangos del modo competitivo, ordenados
+            desde los niveles iniciales hasta el más alto.
+        </p>
+        <div class="rank-list">
+            <div class="rank bronze">
+                <span class="rank-number">01</span>
+                <div>
+                    <h3>Bronce</h3>
+                    <p>Aprende los fundamentos y controla tu vehículo.</p>
+                </div>
+            </div>
+            <div class="rank silver">
+                <span class="rank-number">02</span>
+                <div>
+                    <h3>Plata</h3>
+                    <p>
+                        Mejora tu precisión y empieza a anticipar las jugadas.
+                    </p>
+                </div>
+            </div>
+            <div class="rank gold">
+                <span class="rank-number">03</span>
+                <div>
+                    <h3>Oro</h3>
+                    <p>Fortalece tu posicionamiento y el juego en equipo.</p>
+                </div>
+            </div>
+            <div class="rank platinum">
+                <span class="rank-number">04</span>
+                <div>
+                    <h3>Platino</h3>
+                    <p>
+                        Perfecciona tus rotaciones y tus primeros toques aéreos.
+                    </p>
+                </div>
+            </div>
+            <div class="rank diamond">
+                <span class="rank-number">05</span>
+                <div>
+                    <h3>Diamante</h3>
+                    <p>
+                        Desarrolla consistencia, velocidad y mejores decisiones.
+                    </p>
+                </div>
+            </div>
+            <div class="rank champion">
+                <span class="rank-number">06</span>
+                <div>
+                    <h3>Campeón</h3>
+                    <p>Exige precisión mecánica y buena lectura del partido.</p>
+                </div>
+            </div>
+            <div class="rank grand">
+                <span class="rank-number">07</span>
+                <div>
+                    <h3>Gran Campeón</h3>
+                    <p>Un rango avanzado que requiere un nivel muy elevado.</p>
+                </div>
+            </div>
+            <div class="rank ssl">
+                <span class="rank-number">08</span>
+                <div>
+                    <h3>Supersonic Legend</h3>
+                    <p>El rango más alto de la clasificación competitiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container esports">
+        <h2>Rocket League Esports</h2>
+        <p>
+            El circuito competitivo reúne a equipos y jugadores profesionales
+            que disputan torneos para demostrar sus habilidades. La Rocket
+            League Championship Series (RLCS) es una de las competiciones más
+            destacadas del juego.
+        </p>
+    </section>
+</Layout>
+<style>
+    .rank-section {
+        padding-bottom: 3rem;
+    }
+    .rank-section > h2,
+    .esports h2 {
+        font-size: 2rem;
+    }
+    .section-description,
+    .rank p,
+    .esports p {
+        color: var(--muted);
+    }
+    .rank-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .rank {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem;
+        background: #142238;
+        border: 1px solid #293b54;
+        border-left: 5px solid var(--rank-color);
+        border-radius: 12px;
+    }
+    .rank-number {
+        color: var(--rank-color);
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .rank h3 {
+        margin: 0;
+    }
+    .rank p {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+    }
+    .bronze {
+        --rank-color: #cd8756;
+    }
+    .silver {
+        --rank-color: #bdc8d4;
+    }
+    .gold {
+        --rank-color: #ffd166;
+    }
+    .platinum {
+        --rank-color: #56d7cf;
+    }
+    .diamond {
+        --rank-color: #65a9ff;
+    }
+    .champion {
+        --rank-color: #a58aff;
+    }
+    .grand {
+        --rank-color: #ff7a9b;
+    }
+    .ssl {
+        --rank-color: #ffffff;
+    }
+    .esports {
+        margin-bottom: 4rem;
+        padding: 2rem;
+        background: linear-gradient(120deg, #153b62, #28264b);
+        border-radius: 18px;
+    }
+    @media (max-width: 650px) {
+        .rank-list {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

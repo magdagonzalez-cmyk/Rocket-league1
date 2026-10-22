@@ -1,16 +1,113 @@
 ---
+import Layout from "../layout/layout.astro";
+const author = "Magdalena González";
 ---
+<Layout
+    title="Inicio"
+    description="Descubre Rocket League, el juego que combina fútbol y coches."
+    author={author}
+>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">VELOCIDAD · ESTRATEGIA · COMPETICIÓN</span>
+            <h1>DOMINA LA <span>CANCHA.</span></h1>
+            <p>
+                Coches propulsados por cohetes, saltos imposibles y goles
+                espectaculares. Descubre todo el universo de Rocket League.
+            </p>
+            <a class="cta" href="/jugabilidad">Descubre cómo jugar →</a>
+        </div>
+    </section>
+    <section class="container overview">
+        <p class="eyebrow">BIENVENIDO A ROCKETZONE</p>
+        <h2>Mucho más que fútbol con coches</h2>
+        <p>
+            Rocket League combina fútbol y conducción en partidos llenos de
+            velocidad. Los jugadores utilizan vehículos para golpear una pelota
+            gigante, marcar goles y trabajar en equipo.
+        </p>
+        <div class="cards">
+            <article class="info-card">
+                <span class="symbol">🏎️</span>
+                <h3>Personaliza tu coche</h3>
+                <p>Explora carrocerías, ruedas, pinturas y accesorios.</p>
+                <a href="/autos">Explorar autos →</a>
+            </article>
+            <article class="info-card">
+                <span class="symbol">🏆</span>
+                <h3>Compite al máximo</h3>
+                <p>Mejora tu nivel, sube de rango y conoce los esports.</p>
+                <a href="/competitivo">Ver competitivo →</a>
+            </article>
+            <article class="info-card">
+                <span class="symbol">🌐</span>
+                <h3>Únete a la comunidad</h3>
+                <p>Comparte jugadas, aprende y juega con tus amigos.</p>
+                <a href="/comunidad">Conocer comunidad →</a>
+            </article>
+        </div>
+    </section>
+</Layout>
+<style>
+    .hero {
+        min-height: 480px;
+        display: flex;
+        align-items: center;
+        padding: 5rem 8%;
+        background:
+            radial-gradient(ellipse at 85% 30%, #174d79 0%, transparent 45%),
+            linear-gradient(120deg, #101a2b, #132c49);
+        border-bottom: 1px solid #2c4562;
+    }
+    .hero-content {
+        max-width: 750px;
+    }
+    .hero h1 {
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 900;
+        margin: 1rem 0;
+    }
+    .hero h1 span {
+        color: var(--orange);
+    }
+    .hero p {
+        max-width: 600px;
+        color: #c2d2e7;
+        font-size: 1.1rem;
+    }
+    .cta {
+        display: inline-block;
+        margin-top: 1.2rem;
+        padding: 0.9rem 1.3rem;
+        background: var(--orange);
+        color: #111827;
+        border-radius: 8px;
+        font-weight: 800;
+        text-decoration: none;
+    }
+    .cta:hover {
+        background: #ffad66;
+    }
+    .overview {
+        padding-top: 3rem;
+    }
+    .overview > h2 {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+    .overview > p:not(.eyebrow) {
+        color: var(--muted);
+        max-width: 800px;
+    }
+    .overview .cards {
+        margin-top: 2rem;
+    }
+    .symbol {
+        font-size: 2rem;
+    }
+    .info-card a {
+        color: #66baff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+</style>

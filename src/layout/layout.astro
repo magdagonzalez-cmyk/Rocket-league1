@@ -1,0 +1,29 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import "../styles/global.css";
+interface Props {
+    title: string;
+    description: string;
+    author: string;
+}
+const { title, description, author } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <meta name="author" content={author} />
+        <meta name="theme-color" content="#101a2b" />
+        <title>{title} | RocketZone</title>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

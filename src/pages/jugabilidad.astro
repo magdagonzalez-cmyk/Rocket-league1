@@ -1,0 +1,135 @@
+---
+import Layout from "../layout/layout.astro";
+const author = "Naaray Seguel";
+---
+<Layout
+    title="Jugabilidad"
+    description="Aprende las reglas, los controles y las mecánicas de Rocket League."
+    author={author}
+>
+
+    <section class="container page-intro">
+        <span class="eyebrow">APRENDE A JUGAR</span>
+        <h1>La jugabilidad de Rocket League</h1>
+        <p>
+            Conduce, salta, acelera y golpea la pelota para marcar goles. La
+            clave está en combinar habilidad, estrategia y trabajo en equipo.
+        </p>
+    </section>
+    <section class="container mechanics">
+        <h2>Mecánicas principales</h2>
+        <div class="mechanic-grid">
+            <article class="mechanic">
+                <span>🚗</span>
+                <h3>Conducción</h3>
+                <p>Controla la velocidad y posición de tu vehículo.</p>
+            </article>
+            <article class="mechanic">
+                <span>🚀</span>
+                <h3>Turbo</h3>
+                <p>Utiliza el impulso para acelerar y alcanzar la pelota.</p>
+            </article>
+            <article class="mechanic">
+                <span>🦘</span>
+                <h3>Saltos</h3>
+                <p>Salta para interceptar la pelota y realizar maniobras.</p>
+            </article>
+            <article class="mechanic">
+                <span>✈️</span>
+                <h3>Juego aéreo</h3>
+                <p>Combina saltos, impulso y orientación en el aire.</p>
+            </article>
+            <article class="mechanic">
+                <span>🛡️</span>
+                <h3>Defensa.</h3>
+                <p>Anticipa los tiros rivales y protege tu portería.</p>
+            </article>
+            <article class="mechanic">
+                <span>⚽</span>
+                <h3>Tiros y pases</h3>
+                <p>Dirige la pelota y crea oportunidades para tu equippo.</p>
+            </article>
+        </div>
+    </section>
+    <section class="container rules">
+        <h2>¿Cómo se juega?</h2>
+        <ol>
+            <li>Dos equipos se enfrentan en una arena con porterías.</li>
+            <li>
+                Los jugadores utilizan coches para golpear una pelota gigante.
+            </li>
+            <li>El objetivo es marcar más goles que el equipo contrario.</li>
+            <li>
+                El turbo y los saltos permiten realizar movimientos especiales.
+            </li>
+            <li>
+                La comunicación y el posicionamiento ayudan a ganar partidos.
+            </li>
+        </ol>
+    </section>
+    <section class="container practice">
+        <h2>Consejos para principiantes</h2>
+        <p>
+            Practica primero la conducción y los tiros básicos. Después, aprende
+            a administrar el turbo, defender y realizar movimientos aéreos. La
+            constancia es fundamental para progresar.
+        </p>
+        <a href="/competitivo">Conoce el modo competitivo →</a>
+    </section>
+</Layout>
+<style>
+    .mechanics {
+        padding-bottom: 2rem;
+    }
+    .mechanic-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .mechanic {
+        padding: 1.5rem;
+        background: #142238;
+        border: 1px solid #293b54;
+        border-radius: 16px;
+    }
+    .mechanic > span {
+        font-size: 2.2rem;
+    }
+    .mechanic p,
+    .practice p {
+        color: var(--muted);
+    }
+    .rules {
+        margin-top: 1rem;
+        padding: 2rem;
+        background: #142238;
+        border-radius: 18px;
+    }
+    .rules li {
+        padding: 0.5rem 0;
+        line-height: 1.7;
+    }
+    .practice {
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        padding: 2rem;
+        background: linear-gradient(120deg, #173753, #25264b);
+        border-radius: 18px;
+    }
+    .practice a {
+        color: #ffad66;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    @media (max-width: 750px) {
+        .mechanic-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    @media (max-width: 450px) {
+        .mechanic-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

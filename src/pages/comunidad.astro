@@ -1,0 +1,107 @@
+---
+import Layout from "../layout/layout.astro";
+const author = "Vicente Vallejos";
+---
+<Layout
+    title="Comunidad"
+    description="Conoce la comunidad de Rocket League y las formas de compartir el juego."
+    author={author}
+>
+
+    <section class="container page-intro">
+        <span class="eyebrow">JUEGA CON OTROS</span>
+        <h1>Una comunidad global</h1>
+        <p>
+            Rocket League reúne a jugadores que comparten estrategias, crean
+            contenido, forman equipos y disfrutan de la competición.
+        </p>
+    </section>
+    <section class="container cards">
+        <article class="community-card">
+            <div class="community-icon">🤝</div>
+            <h2>Juego en equipo</h2>
+            <p>
+                Coordina tus movimientos, comunícate con tus compañeros y
+                aprende a confiar en las rotaciones de tu equipo.
+            </p>
+        </article>
+        <article class="community-card">
+            <div class="community-icon">🎬</div>
+            <h2>Crea contenido</h2>
+            <p>
+                Comparte goles, atajadas, jugadas aéreas y momentos divertidos
+                con otros aficionados.
+            </p>
+        </article>
+        <article class="community-card">
+            <div class="community-icon">🏅</div>
+            <h2>Compite con amigos</h2>
+            <p>
+                Organiza partidas privadas, forma equipos y practica para
+                mejorar tus habilidades.
+            </p>
+        </article>
+    </section>
+    <section class="container community-tips">
+        <h2>Consejos para una buena comunidad</h2>
+        <ul>
+            <li>
+                Respeta a los demás jugadores, independientemente de su nivel.
+            </li>
+            <li>Utiliza una comunicación positiva durante los partidos.</li>
+            <li>Aprende de las derrotas y reconoce las buenas jugadas.</li>
+            <li>No compartas datos personales en espacios públicos.</li>
+            <li>
+                Denuncia los comportamientos abusivos mediante las herramientas
+                disponibles.
+            </li>
+        </ul>
+        <p class="community-note">
+            Una buena comunidad se construye con respeto, colaboración y ganas
+            de aprender.
+        </p>
+    </section>
+</Layout>
+<style>
+    .community-card {
+        padding: 1.7rem;
+        background: #142238;
+        border: 1px solid #293b54;
+        border-radius: 18px;
+        transition:
+            transform 0.2s,
+            background 0.2s;
+    }
+    .community-card:hover {
+        transform: translateY(-5px);
+        background: #1a304c;
+    }
+    .community-icon {
+        display: grid;
+        place-items: center;
+        width: 65px;
+        height: 65px;
+        background: #203d5c;
+        border-radius: 16px;
+        font-size: 2rem;
+    }
+    .community-card p {
+        color: var(--muted);
+    }
+    .community-tips {
+        margin-bottom: 4rem;
+        padding: 2rem;
+        background: linear-gradient(140deg, #142238, #173753);
+        border-radius: 18px;
+    }
+    .community-tips li {
+        padding: 0.5rem 0;
+        line-height: 1.7;
+    }
+    .community-note {
+        padding: 1rem;
+        color: #ffbc80;
+        background: #3a2b25;
+        border-radius: 10px;
+    }
+</style>

@@ -1,0 +1,117 @@
+---
+import Layout from "../layout/layout.astro";
+const author = "Naaray Seguel";
+---
+<Layout
+    title="Autos"
+    description="Conoce los vehículos, carrocerías y opciones de personalización de Rocket League."
+    author={author}
+>
+
+    <section class="container page-intro">
+        <span class="eyebrow">TU ESTILO, TU VEHÍCULO</span>
+        <h1>El garaje de Rocket League</h1>
+        <p>
+            Elige una carrocería, personaliza su apariencia y encuentra el
+            estilo que mejor represente tu forma de jugar.
+        </p>
+    </section>
+    <section class="container cards">
+        <article class="car-card">
+            <div class="car-icon">🚙</div>
+            <span class="tag">Clásico</span>
+            <h2>Octane</h2>
+            <p>
+                Una de las carrocerías más reconocidas del juego, popular por su
+                diseño compacto y equilibrado.
+            </p>
+        </article>
+        <article class="car-card">
+            <div class="car-icon">🏎️</div>
+            <span class="tag">Deportivo</span>
+            <h2>Dominus</h2>
+            <p>
+                Una carrocería alargada con una silueta deportiva que muchos
+                jugadores utilizan para realizar jugadas técnicas.
+            </p>
+        </article>
+        <article class="car-card">
+            <div class="car-icon">🚗</div>
+            <span class="tag">Alternativo</span>
+            <h2>Fennec</h2>
+            <p>
+                Una carrocería de aspecto cuadrado que se ha convertido en una
+                elección muy popular entre jugadores competitivos.
+            </p>
+        </article>
+    </section>
+    <section class="container customization">
+        <h2>Personaliza cada detalle</h2>
+        <p>
+            Combina colores, ruedas, calcomanías, explosiones de gol, estelas y
+            accesorios para crear un vehículo a tu gusto.
+        </p>
+        <div class="custom-list">
+            <span>🎨 Pinturas</span>
+            <span>🛞 Ruedas</span>
+            <span>✨ Calcomanías</span>
+            <span>🚀 Estelas</span>
+        </div>
+    </section>
+</Layout>
+<style>
+    .car-card {
+        padding: 1.5rem;
+        background: linear-gradient(145deg, #172c46, #101a2b);
+        border: 1px solid #294767;
+        border-radius: 18px;
+        transition:
+            transform 0.2s,
+            border-color 0.2s;
+    }
+    .car-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--orange);
+    }
+    .car-icon {
+        display: grid;
+        place-items: center;
+        height: 135px;
+        background: #203d5c;
+        border-radius: 12px;
+        font-size: 4rem;
+    }
+    .tag {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.3rem 0.6rem;
+        color: #ffb16f;
+        background: #4b3023;
+        border-radius: 20px;
+        font-size: 0.75rem;
+    }
+    .car-card h2 {
+        margin-bottom: 0.5rem;
+    }
+    .car-card p,
+    .customization p {
+        color: var(--muted);
+    }
+    .customization {
+        margin-bottom: 4rem;
+        padding: 2rem;
+        background: #142238;
+        border-radius: 18px;
+    }
+    .custom-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .custom-list span {
+        padding: 0.7rem 1rem;
+        background: #223a56;
+        border-radius: 10px;
+    }
+</style>

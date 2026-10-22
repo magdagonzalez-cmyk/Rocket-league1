@@ -1,0 +1,71 @@
+<header class="site-header">
+    <a href="/" class="brand">
+        <span class="brand-logo">RL</span>
+        <span>ROCKET<span class="orange">ZONE</span></span>
+    </a>
+    <nav aria-label="Menú principal">
+        <a href="/">Inicio</a>
+        <a href="/autos">Autos</a>
+        <a href="/competitivo">Competitivo</a>
+        <a href="/comunidad">Comunidad</a>
+        <a href="/jugabilidad">Jugabilidad</a>
+    </nav>
+</header>
+<style>
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        padding: 1.2rem 6%;
+        background: #101a2b;
+        border-bottom: 2px solid #ff8c32;
+    }
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        color: white;
+        font-weight: 900;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+    .brand-logo {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        background: #168de2;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        transform: skew(-5deg);
+    }
+    .orange {
+        color: #ff8c32;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.1rem;
+    }
+    nav a {
+        color: #dce8f5;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: color 0.2s;
+    }
+    nav a:hover {
+        color: #ff8c32;
+    }
+    @media (max-width: 700px) {
+        .site-header {
+            justify-content: center;
+        }
+        nav {
+            justify-content: center;
+            gap: 0.8rem;
+        }
+    }
+</style>
